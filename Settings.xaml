@@ -1,0 +1,62 @@
+﻿<Page x:Class="Финансы.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Финансы"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="335"
+      Title="Settings">
+
+    <Grid>
+        <Path Fill="#6247AA" VerticalAlignment="Top" Height="30" Stretch="Fill" Width="30" Margin="31,165,0,0" HorizontalAlignment="Left">
+            <Path.Data>
+                <PathGeometry Figures="M124.875 0C55.875 0 0 56 0 125C0 194 55.875 250 124.875 250C194 250 250 194 250 125C250 56 194 0 124.875 0ZM211.5 75H174.625C170.713 59.5182 164.92 44.5737 157.375 30.5C180.176 38.35 199.39 54.1465 211.5 75ZM125 25.5C135.375 40.5 143.5 57.125 148.875 75H101.125C106.5 57.125 114.625 40.5 125 25.5ZM28.25 150C26.25 142 25 133.625 25 125C25 116.375 26.25 108 28.25 100H70.5C69.5 108.25 68.75 116.5 68.75 125C68.75 133.5 69.5 141.75 70.5 150H28.25ZM38.5 175H75.375C79.375 190.625 85.125 205.625 92.625 219.5C69.7996 211.693 50.5729 195.885 38.5 175ZM75.375 75H38.5C50.5729 54.1147 69.7996 38.3071 92.625 30.5C85.0803 44.5737 79.2872 59.5182 75.375 75ZM125 224.5C114.625 209.5 106.5 192.875 101.125 175H148.875C143.5 192.875 135.375 209.5 125 224.5ZM154.25 150H95.75C94.625 141.75 93.75 133.5 93.75 125C93.75 116.5 94.625 108.125 95.75 100H154.25C155.375 108.125 156.25 116.5 156.25 125C156.25 133.5 155.375 141.75 154.25 150ZM157.375 219.5C164.875 205.625 170.625 190.625 174.625 175H211.5C199.39 195.853 180.176 211.65 157.375 219.5ZM179.5 150C180.5 141.75 181.25 133.5 181.25 125C181.25 116.5 180.5 108.25 179.5 100H221.75C223.75 108 225 116.375 225 125C225 133.625 223.75 142 221.75 150H179.5Z" FillRule="NonZero"/>
+            </Path.Data>
+        </Path>
+        
+        <Path Fill="#6247AA" VerticalAlignment="Top" Height="30" Stretch="Fill" Width="30" Margin="31,234,0,0" HorizontalAlignment="Left">
+            <Path.Data>
+                <PathGeometry Figures="M3.22222 30C2.33611 30 1.57728 29.706 0.945725 29.118C0.314169 28.53 -0.00107134 27.824 2.73533e-06 27V6C2.73533e-06 5.175 0.315781 4.4685 0.947336 3.8805C1.57889 3.2925 2.33719 2.999 3.22222 3H4.83333V1.4625C4.83333 1.0375 4.988 0.6875 5.29734 0.4125C5.60667 0.1375 5.98904 0 6.44445 0C6.90093 0 7.28383 0.144 7.59317 0.432C7.9025 0.72 8.05663 1.076 8.05556 1.5V3H20.9444V1.4625C20.9444 1.0375 21.0991 0.6875 21.4084 0.4125C21.7178 0.1375 22.1001 0 22.5556 0C23.012 0 23.3949 0.144 23.7043 0.432C24.0136 0.72 24.1677 1.076 24.1667 1.5V3H25.7778C26.6639 3 27.4227 3.294 28.0543 3.882C28.6858 4.47 29.0011 5.176 29 6V27C29 27.825 28.6842 28.5315 28.0527 29.1195C27.4211 29.7075 26.6628 30.001 25.7778 30H3.22222ZM3.22222 27H25.7778V12H3.22222V27Z" FillRule="NonZero"/>
+            </Path.Data>
+        </Path>
+
+        <Path Fill="#6247AA" VerticalAlignment="Top" Height="30" Stretch="Fill" Width="30" Margin="31,92,0,0" HorizontalAlignment="Left">
+            <Path.Data>
+                <PathGeometry Figures="M15 16.875C17.2378 16.875 19.3839 15.9861 20.9662 14.4037C22.5486 12.8214 23.4375 10.6753 23.4375 8.4375C23.4375 6.19974 22.5486 4.05362 20.9662 2.47129C19.3839 0.888948 17.2378 0 15 0C12.7622 0 10.6161 0.888948 9.03379 2.47129C7.45145 4.05362 6.5625 6.19974 6.5625 8.4375C6.5625 10.6753 7.45145 12.8214 9.03379 14.4037C10.6161 15.9861 12.7622 16.875 15 16.875ZM9.45117 18.75C4.23047 18.75 0 22.9805 0 28.2012C0 29.1973 0.808594 30 1.79883 30H28.2012C29.1973 30 30 29.1914 30 28.2012C30 22.9805 25.7695 18.75 20.5488 18.75H9.45117Z" FillRule="NonZero"/>
+            </Path.Data>
+        </Path>
+
+        <Path Fill="#6247AA" VerticalAlignment="Top" Height="30" Stretch="Fill" Width="26" Margin="31,478,0,0" HorizontalAlignment="Left">
+            <Path.Data>
+                <PathGeometry Figures="M24.6055 10.5774L21.4382 29.0531C21.3885 29.3182 21.2456 29.558 21.0341 29.7309C20.8225 29.9038 20.5558 29.999 20.28 30H5.72C5.44421 29.999 5.17745 29.9038 4.96594 29.7309C4.75442 29.558 4.61146 29.3182 4.56182 29.0531L1.39455 10.5774C1.36726 10.4129 1.37671 10.2447 1.42225 10.0841C1.46779 9.92362 1.54833 9.77462 1.65836 9.64737C1.76838 9.52012 1.90528 9.41764 2.05966 9.34696C2.21404 9.27627 2.38224 9.23906 2.55273 9.23787H23.4236C23.5961 9.2357 23.767 9.27044 23.9242 9.33966C24.0815 9.40888 24.2214 9.51089 24.334 9.63854C24.4466 9.76619 24.5293 9.91638 24.5762 10.0786C24.6231 10.2408 24.6331 10.411 24.6055 10.5774ZM26 5.77367C26 6.07993 25.8755 6.37364 25.6539 6.59019C25.4322 6.80675 25.1316 6.92841 24.8182 6.92841H1.18182C0.86838 6.92841 0.567781 6.80675 0.346147 6.59019C0.124513 6.37364 0 6.07993 0 5.77367C0 5.46742 0.124513 5.17371 0.346147 4.95715C0.567781 4.7406 0.86838 4.61894 1.18182 4.61894H7.09091V1.15473C7.09091 0.84848 7.21542 0.554769 7.43706 0.338214C7.65869 0.121659 7.95929 0 8.27273 0H17.7273C18.0407 0 18.3413 0.121659 18.5629 0.338214C18.7846 0.554769 18.9091 0.84848 18.9091 1.15473V4.61894H24.8182C25.1316 4.61894 25.4322 4.7406 25.6539 4.95715C25.8755 5.17371 26 5.46742 26 5.77367ZM16.5455 4.61894V2.30947H9.45455V4.61894H16.5455Z" FillRule="NonZero"/>
+            </Path.Data>
+        </Path>
+
+        <Label Content="Настройки" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Montserrat"  FontSize="30" Padding="0,0,0,0" Foreground="#461E5C" HorizontalContentAlignment="Center" FontWeight="SemiBold" Margin="0,32,0,0"/>
+        <Label Content="Выбор языка" HorizontalAlignment="Left" Margin="71,157,0,0" VerticalAlignment="Top" FontFamily="Montserrat"  FontSize="15" Padding="0,0,0,0" Foreground="#461E5C"/>
+        <Label Content="Период по умолчанию" HorizontalAlignment="Left" Margin="71,228,0,0" VerticalAlignment="Top" FontFamily="Montserrat"  FontSize="15" Padding="0,0,0,0" Foreground="#461E5C"/>
+        
+        <TextBox x:Name="MyName" Text ="Имя" HorizontalAlignment="Left" Margin="71,92,0,0" VerticalAlignment="Top" FontFamily="Montserrat"  FontSize="25" Padding="0,0,0,0" Foreground="#461E5C" Background="{x:Null}" BorderBrush="{x:Null}" GotFocus="Name_GotFocus" BorderThickness="0,0,0,0" VerticalContentAlignment="Center" Width="188"/>
+
+        <ComboBox x:Name="Period" HorizontalAlignment="Left" Margin="71,246,0,0" VerticalAlignment="Top" Width="108" BorderThickness="0,0,0,0" Background="White" Foreground="#FCA635" FontFamily="Montserrat"  FontSize="14" SelectionChanged="Selection">
+            <ComboBoxItem Content ="День" FontFamily="Montserrat" />
+            <ComboBoxItem Content ="Неделя" IsSelected="True" FontFamily="Montserrat" />
+            <ComboBoxItem Content ="Месяц" FontFamily="Montserrat" />
+        </ComboBox>
+
+        <ComboBox HorizontalAlignment="Left" Margin="71,175,0,0" VerticalAlignment="Top" Width="108" BorderThickness="0,0,0,0" Background="White" Foreground="#FCA635" FontFamily="Montserrat"  FontSize="14" SelectionChanged="NewLanguage">
+            <ComboBoxItem Content ="Русский" IsSelected="True" VerticalContentAlignment="Center" FontFamily="Montserrat" />
+            <ComboBoxItem Content ="English" FontFamily="Montserrat" />
+        </ComboBox>
+
+        <Button Margin="72,481,37,45" BorderBrush="{x:Null}" Background="{x:Null}" BorderThickness="0,0,0,0" VerticalContentAlignment="Top" Padding="0,0,0,0" UseLayoutRounding="True" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Click="DeleteAll">
+            <Label Padding="0,0,0,0" FontSize="20" FontFamily="Montserrat"  Foreground="#FCA635" Content="Удалить все данные"/>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="4"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>
