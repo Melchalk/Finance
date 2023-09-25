@@ -75,7 +75,6 @@ namespace Финансы
             mainWindow.Income.currectPeriod.Background = Brushes.White;
 
             mainWindow.AnotherPeriod(periodsDays[currectPeriod]);
-
         }
 
         private void Edit(object sender, SelectionChangedEventArgs e)

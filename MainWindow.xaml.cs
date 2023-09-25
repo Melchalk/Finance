@@ -5,12 +5,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
-using System.Windows.Shapes;
 using System.IO;
 using Path = System.Windows.Shapes.Path;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
 namespace Финансы
@@ -26,7 +22,7 @@ namespace Финансы
             Currency = new();
             currentIconCurrency.Data = ((Path)Currency.RUS.Content).Data;
             Settings = new();
-            file = Directory.GetCurrentDirectory() + "/MyTest.txt";
+            file = Directory.GetCurrentDirectory() + "/MyTest.json";
             if (!File.Exists(file))
                 File.Create(file);
             jsonFile = File.ReadAllText(file);
@@ -63,7 +59,7 @@ namespace Финансы
 
         public double currentCurrenty = 1;
         public string currentPeriod = "Неделя";
-        public Path currentIconCurrency = new Path();
+        public Path currentIconCurrency = new();
 
         public Brush? brush = new BrushConverter().ConvertFromString("#461E5C") as Brush;
 

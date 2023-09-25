@@ -12,11 +12,14 @@ namespace Финансы
         public EditingExpenses()
         {
             InitializeComponent();
-
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            children = (Border)mainWindow.Expenses.Li.SelectedItem;
         }
 
         Button icon = new();
         DateTime maybeDate;
+        Border children;
+        Border b;
 
         private void newRecord_Loaded(object sender, RoutedEventArgs e)
         {
@@ -30,7 +33,6 @@ namespace Финансы
         private void Date_Loaded(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            Border children = (Border)mainWindow.Expenses.Li.SelectedItem;
             foreach (var child in mainWindow.mainDE)
             {
                 foreach (var childB in child.Value)
@@ -48,7 +50,6 @@ namespace Финансы
         private void Edit(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow; 
-            Border children = (Border)mainWindow.Expenses.Li.SelectedItem;
             NewDate();
             foreach (var child in mainWindow.mainDE)
             {
@@ -56,7 +57,15 @@ namespace Финансы
                 {
                     if (child.Value[i] == children)
                     {
-                        TextBlock tet = (TextBlock)((StackPanel)mainWindow.mainDE[child.Key][i].Child).Children[^2];
+                        var itemsOfStack = ((StackPanel)mainWindow.mainDE[child.Key][i].Child).Children;
+                        if (b is not null && itemsOfStack[0] != b)
+                        {
+                            itemsOfStack.RemoveAt(0);
+                            itemsOfStack.Insert(0, b);
+                            ((TextBlock)itemsOfStack[1]).Text = mainWindow.Categories.TextN(icon.Name);
+                        }
+
+                        TextBlock tet = (TextBlock)itemsOfStack[^2];
                         if (tet.Text != newRecord.Text)
                         {
                             try { double.Parse(newRecord.Text); }
@@ -69,10 +78,10 @@ namespace Финансы
 
                             mainWindow.dictionaryExAmout[child.Key] += cS;
                             mainWindow.totalAmount -= (double)cS;
-                            ((TextBlock)((StackPanel)mainWindow.mainDE[child.Key][i].Child).Children[^2]).Text = newRecord.Text;
+                            ((TextBlock)itemsOfStack[^2]).Text = newRecord.Text;
                             mainWindow.NewTotal();
-                            mainWindow.GeneralExRecalculation();
                         }
+                        mainWindow.GeneralExRecalculation();
                         break;
                     }
                 }
@@ -83,11 +92,8 @@ namespace Финансы
 
         private void NewIcon(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-
             icon = (Button)sender;
-
-            Border b = new Border()
+            b = new Border()
             {
                 Child = new Path()
                 {
@@ -103,36 +109,13 @@ namespace Финансы
                 CornerRadius = new CornerRadius(20),
                 Margin = new Thickness(9, 0, 0, 0),
             };
-
-            Border children = (Border)mainWindow.Expenses.Li.SelectedItem;
-
-            foreach (var child in mainWindow.mainDE)
-            {
-                for (int i = 0; i < child.Value.Count; i++)
-                {
-                    if (child.Value[i] == children)
-                    {
-                        ((StackPanel)mainWindow.mainDE[child.Key][i].Child).Children.RemoveAt(0);
-                        ((StackPanel)mainWindow.mainDE[child.Key][i].Child).Children.Insert(0, b);
-                        ((TextBlock)((StackPanel)mainWindow.mainDE[child.Key][i].Child).Children[1]).Text = mainWindow.Categories.TextN(icon.Name);
-
-                        mainWindow.GeneralExRecalculation();
-                        break;
-                    }
-                }
-            }
         }
 
-        private void NewSum(object sender, RoutedEventArgs e)
-        {
-            newRecord.Text = String.Empty;
-        }
-
+        private void NewSum(object sender, RoutedEventArgs e) => newRecord.Text = String.Empty;
+        
         private void Del(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-
-            Border children = (Border)mainWindow.Expenses.Li.SelectedItem;
 
             foreach (var child in mainWindow.mainDE)
             {
@@ -148,7 +131,6 @@ namespace Финансы
                     break;
                 }
             }
-
             mainWindow.GeneralExRecalculation();
             mainWindow.MainFrame.NavigationService.Navigate(mainWindow.Expenses);
         }
@@ -159,7 +141,7 @@ namespace Финансы
             if (currentDate == maybeDate) return;
 
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            Border children = (Border)mainWindow.Expenses.Li.SelectedItem;
+
             bool find = false;
             foreach (var child in mainWindow.mainDE)
             {
