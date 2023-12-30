@@ -1,11 +1,11 @@
-﻿<Window x:Class="Финансы.MainWindow"
+﻿<Window x:Class="FinanceDiary.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Финансы"
+        xmlns:local="clr-namespace:FinanceDiary"
         mc:Ignorable="d"
-        Title="Мои финансы" Height="656" Width="335" Loaded="Window_Loaded" MinWidth="335" MaxWidth="335" MaxHeight="656" MinHeight="656" Closed="Window_Closed">
+        Title="Мои FinanceDiary" Height="656" Width="335" Loaded="Window_Loaded" MinWidth="335" MaxWidth="335" MaxHeight="656" MinHeight="656" Closed="Window_Closed">
     <Grid Background="#FFFAF5">
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Height="550" VerticalAlignment="Bottom" Margin="0,0,0,80" />
 
